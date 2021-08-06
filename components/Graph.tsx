@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Graph() {
+async function Graph() {
   const canRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -8,6 +8,7 @@ function Graph() {
     const contx = curr?.getContext('2d');
 
     contx?.fillRect(0, 0, 100, 100);
+
   });
   return (<canvas ref={canRef}/>);
 }
